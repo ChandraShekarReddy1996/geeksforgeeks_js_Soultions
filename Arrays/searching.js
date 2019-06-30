@@ -1,4 +1,4 @@
-var testarray = [3,2,1,6,5,4,7]
+var testarray = [7, 9, 11, 12, 5]
 
 var linearSearch = (array,item) => {
 
@@ -53,6 +53,18 @@ var findPairWithMaxSum = (array) => {
     console.log('maxSum : => ',maxSum,'maxpair : => ',maxpair)
 }
 
+//Ques : Find the Rotation Count in Rotated Sorted array
+
+var fimdRotationCount = (array) => {
+    let count  = 0
+    for(let i = 0;i < array.length ; i++){
+        if(array[i] > array[array.length - 1] && i != array.length - 1)
+            count++
+    }
+
+    console.log('count of the Iteration : => ',count)
+
+}
 
 
 var searchAnArray = (array,des) => {
@@ -74,6 +86,6 @@ var searchAnArray = (array,des) => {
 
 // linearSearch(testarray,1)
 // searchAnArray(testarray,3)
- findPairWithMaxSum(testarray)
-
+// findPairWithMaxSum(testarray)
+fimdRotationCount(testarray)
 
